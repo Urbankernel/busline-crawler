@@ -1,0 +1,11 @@
+# busline-crawler 密钥文件模板
+# 使用方法：复制本文件为 configs/keys.txt，再填写真实值。
+#   Windows:       copy configs\keys.txt.example configs\keys.txt
+#   macOS / Linux: cp configs/keys.txt.example configs/keys.txt
+# 每行「字段=值」；# 开头为注释。keys.txt 已在 .gitignore 中排除，请勿提交真实密钥。
+
+# 高德开放平台「Web 服务」类型 Key（多 key 逗号分隔，自动轮换）：https://lbs.amap.com
+amap=你的高德Web服务Key
+
+# 百度地图开放平台「浏览器端」AK（BusLineSearch 属 JS API，必须用浏览器端 Key）：https://lbsyun.baidu.com
+baidu=你的百度浏览器端AK

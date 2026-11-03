@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "busline-crawler"
+version = "0.1.0"
+description = "城市公交（地铁）线路、站点与轨迹获取工具（高德 / 百度）"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Urbankernel" }]
+keywords = ["bus", "metro", "transit", "amap", "gaode", "baidu", "gis", "crawler"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Urbankernel/busline-crawler"
+Repository = "https://github.com/Urbankernel/busline-crawler"
+# 高德版纯标准库零依赖；百度版需 Playwright（见 optional-dependencies）
+dependencies = []
+
+[project.optional-dependencies]
+# 仅百度抓取需要（BMap.BusLineSearch 走浏览器自动化，需安装 Playwright + chromium）
+browser = ["playwright>=1.40.0"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+busline = "busline.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

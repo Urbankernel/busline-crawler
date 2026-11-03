@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / 编辑器
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 抓取数据产物（真实数据不入库）
+*.gpkg
+*.geojson
+busline_amap.txt
+line_stop_amap.txt
+busline.json
+busstop.json
+busline.txt
+line_stop.txt
+
+# 数据输出目录：默认输出到 runs/，忽略其内容但保留目录本身
+runs/*
+!runs/.gitkeep
+output/
+out/
+
+# 密钥与本地配置（绝不入库）
+.env
+*.env
+config.env
+configs/keys.txt
+!configs/keys.txt.example
+
+# 用户本地配置（configs/example.yaml 为模板入库，configs/config.yaml 为用户配置不入库）
+configs/config.yaml
+configs/config.yml
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# WorkBuddy 项目数据（本地工作区数据，不上传）
+.workbuddy/
